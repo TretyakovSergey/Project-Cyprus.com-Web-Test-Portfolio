@@ -1,5 +1,5 @@
-## Hi There! :earth_americas:
-#### Only problem? If I wasn't moving forward, I felt like I was going to explode.  
+#### Only problem? If I wasn't moving forward, I felt like I was going to explode.
+## Hi There! :earth_americas: 
 ### My name is [Sergey](https://www.linkedin.com/in/sergey-tretyakov/), I'm Software QA Automation Engineer from Cyprus! <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="55">
  
 </div>
