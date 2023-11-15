@@ -24,7 +24,7 @@
 
 
 <div align="center">
-  <img src="https://ih1.redbubble.net/image.3090005671.2199/st,small,507x507-pad,600x600,f8f8f8.jpg" width="600" height="400"/>
+  
 </div>
 
 
