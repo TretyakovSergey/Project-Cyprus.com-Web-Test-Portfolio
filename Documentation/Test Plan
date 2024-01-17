@@ -1,1 +1,81 @@
-https://docs.google.com/document/d/1iRgbSRn_x2sO0ZrvjwHLe4SQ-Hc2Drw3mavb0oOX91E/edit?usp=sharing
+
+
+Link Google Doc. " https://docs.google.com/document/d/1iRgbSRn_x2sO0ZrvjwHLe4SQ-Hc2Drw3mavb0oOX91E/edit?usp=sharing "
+
+
+
+
+                                                        Test Plan
+
+                          Project “Cyprus.com”
+
+Table of contents:
+
+   Introduction
+        1.1 Target
+
+  Test area
+        2.1 Included in testing
+        2.2 Excluded from testing
+
+   Resources
+
+   Testing approaches
+
+
+
+1. INTRODUCTION:
+ 
+Customers want a perfect website, which passes the full cycle of manual testing. Given the specificity of
+the site it is important to have the same quality of the site as per requirements.
+
+Website for tourists who decided to visit Cyprus for the first time:
+  The user can view: entertainment venues (Opening hours, location), Upcoming events.
+Search and Review of Hotels and Hostels:
+  Read reviews, see independent user ratings and see photos of the Hostel, Hotel.
+Search for attractions and view photos of beautiful places in Cyprus
+Read the history of Cyprus
+
+
+    1.1 Target:
+
+Ensure the correct operation of the informative website and its compliance with user expectations.
+
+
+
+
+2. Test Area
+ 2.1 Included in testing:
+
+All the main functions of an informative site, including viewing, searching, (prices, reviews, photos)
+account registration
+
+ 2.2 Excluded from testing:
+Account management functions, account deletion
+ 
+
+
+
+
+3. Resources:
+
+Testing team. 
+          Sergey Efremov - Scrum Master
+         Sergey Tretyakov - User interface Tester & backend tester
+
+Tools and software:
+ GitHub will be used to manage test cases. Jira will be used for defect management.
+
+Test environment:
+ Browsers Chrome, Firefox, Edge. Operating systems macOS.
+
+4. Testing approaches:
+
+Types of testing. 
+    Functional testing, usability testing, compatibility testing.
+Testing methods.
+     Manual testing & Automated
+Testing levels. 
+     Unit testing, integration testing, system testing and user acceptance testing.
+
+
