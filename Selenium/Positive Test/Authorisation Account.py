@@ -106,7 +106,7 @@ except WDE:
 
 driver.quit()
 
-#-------------------------- Same Test With Different personal information -------------------------------------------------
+#-------------------------- Personal information change Test -------------------------------------------------
 
 
 website_url = "https://cyprus.com/"
