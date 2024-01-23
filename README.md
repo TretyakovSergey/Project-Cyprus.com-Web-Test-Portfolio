@@ -1,4 +1,4 @@
-#### Only problem - If I wasn't moving forward, I felt like I was going to explode.
+#### Don't make the classic smart person's mistake of thinking no one's smarter than you.
 ## Hi There! :earth_americas: 
 ### My name is [Sergey](https://www.linkedin.com/in/sergey-tretyakov/), I'm Software QA Automation Engineer from Cyprus! <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="55">
 </div>
