@@ -70,9 +70,6 @@ class TestChrome(unittest.TestCase):
         driver.find_element(By.XPATH, "//div[@class='wil-modal__close'][contains(.,'Close')]").click()
         time.sleep(1)
 
-#    def setUp(self):
-#       self.driver = webdriver.Chrome()
-#        self.driver.maximize_window()
 
     def test_chrome2(self):
         driver = self.driver
