@@ -492,7 +492,6 @@ class TestChrome(unittest.TestCase):
         time.sleep(1)
 
 
-
     def tearDown(self):
         self.driver.quit()
 
