@@ -13,7 +13,7 @@ time.sleep(1)
 
 # generated brand new Browser session
 driver.delete_all_cookies()
-
+print("Test 1 Start!")
 # Check page Title
 expected_title = "Cyprus.com - Make the Most of Cyprus Using our Comprehensive Portal"
 acct_reg_actual_title = driver.title
@@ -54,7 +54,8 @@ driver.find_element(By.XPATH, "//button[@id='signin-btn']").click()
 time.sleep(4)
 
 # Verify text in the authorization plate
-if driver.find_element(By.XPATH, "//p[contains(.,'Wrong user name or password')]"):
+expected_text = driver.find_element(By.XPATH, "//body/div[@id='modal-login']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/p[1]")
+if expected_text.text == "Wrong user name or password":
     print("Ok! Test 1 Pass")
 else:
     print("Test 1 Fail, something went wrong")
@@ -65,7 +66,7 @@ driver = webdriver.Chrome()
 driver.get("https://cyprus.com/")
 driver.maximize_window()
 time.sleep(1)
-
+print("Test 2 Start!")
 # generated brand new Browser session
 driver.delete_all_cookies()
 
@@ -109,7 +110,8 @@ driver.find_element(By.XPATH, "//button[@id='signin-btn']").click()
 time.sleep(4)
 
 # Verify text in the authorization plate
-if driver.find_element(By.XPATH, "//p[contains(.,'Wrong user name or password')]"):
+expected_text = driver.find_element(By.XPATH, "//body/div[@id='modal-login']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/p[1]")
+if expected_text.text == "Wrong user name or password":
     print("Ok! Test 2 Pass")
 else:
     print("Test 2 Fail, something went wrong")
@@ -120,6 +122,7 @@ driver = webdriver.Chrome()
 driver.get("https://cyprus.com/")
 driver.maximize_window()
 time.sleep(1)
+print("Test 3 Start!")
 
 # generated brand new Browser session
 driver.delete_all_cookies()
@@ -160,15 +163,16 @@ time.sleep(1)
 driver.find_element(By.XPATH, "//input[@id='password']").send_keys("Tester777")
 time.sleep(0.5)
 driver.find_element(By.XPATH, "//button[@id='signin-btn']").click()
-time.sleep(4)
+WebDriverWait(driver,10).until(EC.visibility_of_all_elements_located((By.XPATH, "//div[@id='signup-signin-wrapper']")))
 
 # Verify text in the authorization plate
+expected_text = driver.find_element(By.XPATH, "//div[@id='signup-signin-wrapper']")
 try:
-    driver.find_element(By.XPATH, "//*[text()='Hello Tester7! Nice to see you back.']")
+    expected_text.text == "Hello Tester7! Nice to see you back."
     print("logged in")
 except WDE:
     print("Something went wrong")
-
+time.sleep(2)
 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(.,'Edit Profile')]")))
 driver.find_element(By.XPATH, "//a[contains(.,'Edit Profile')]").click()
 time.sleep(2)
@@ -178,12 +182,12 @@ driver.find_element(By.XPATH, "//input[@id='wiloke_phone']").send_keys("352 000 
 time.sleep(2)
 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']")))
 driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
-time.sleep(2)
-try:
-    driver.find_element(By.XPATH, "//*[text()='Incorrect phone number.']")
-    print("Test 3 pass")
-except WDE:
-    print("Test 3 Fail")
+time.sleep(4)
+
+if expected_text == "Incorrect phone number.":
+    print("Test 3 Pass")
+else:
+    print("Test 3 Fall")
 
 driver.quit()
 
