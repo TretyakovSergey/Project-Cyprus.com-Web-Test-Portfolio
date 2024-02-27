@@ -119,11 +119,11 @@ class TestChrome(unittest.TestCase):
         time.sleep(4)
 
         # Verify text in the authorization plate
-        if driver.find_element(By.XPATH, "//p[contains(.,'Wrong user name or password')]"):
+        expected_text = driver.find_element(By.XPATH,"//body/div[@id='modal-login']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/p[1]")
+        if expected_text.text == "Wrong user name or password":
             print("Ok! Test 2 Pass")
         else:
             print("Test 2 Fail, something went wrong")
-
         driver.quit()
 
     def test_chrome3(self):
@@ -191,11 +191,12 @@ class TestChrome(unittest.TestCase):
             EC.element_to_be_clickable((By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']")))
         driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
         time.sleep(2)
-        try:
-            driver.find_element(By.XPATH, "//*[text()='Incorrect phone number.']")
-            print("Test 3 pass")
-        except WDE:
-            print("Test 3 Fail")
+
+        expected_text = "Incorrect phone number"
+        if expected_text == "Incorrect phone number.":
+            print("Test 3 Pass")
+        else:
+            print("Test 3 Fall")
 
         driver.quit()
 
@@ -264,11 +265,12 @@ class TestChrome(unittest.TestCase):
             EC.element_to_be_clickable((By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']")))
         driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
         time.sleep(2)
-        try:
-            driver.find_element(By.XPATH, "//*[text()='Incorrect Address.']")
-            print("Test 4 pass")
-        except WDE:
-            print("Test 4 Fail")
+
+        expected_text = "Incorrect City address."
+        if expected_text == "Incorrect City address.":
+            print("Test 4 Pass")
+        else:
+            print("Test 4 Fall")
 
         driver.quit()
 
@@ -320,8 +322,9 @@ class TestChrome(unittest.TestCase):
         time.sleep(4)
 
         # Verify text in the authorization plate
+        expected_text = driver.find_element(By.XPATH, "//div[@id='signup-signin-wrapper']")
         try:
-            driver.find_element(By.XPATH, "//*[text()='Hello Tester7! Nice to see you back.']")
+            expected_text.text == "Hello Tester7! Nice to see you back."
             print("logged in")
         except WDE:
             print("Something went wrong")
@@ -337,11 +340,12 @@ class TestChrome(unittest.TestCase):
             EC.element_to_be_clickable((By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']")))
         driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
         time.sleep(2)
-        try:
-            driver.find_element(By.XPATH, "//*[text()='Incorrect Address.']")
-            print("Test 5 pass")
-        except WDE:
-            print("Test 5 Fail")
+
+        expected_text = "Incorrect Country address."
+        if expected_text == "Incorrect Country address.":
+            print("Test 5 Pass")
+        else:
+            print("Test 5 Fall")
 
     def tearDown(self):
         self.driver.quit()

@@ -55,7 +55,7 @@ time.sleep(4)
 
 # Verify text in the authorization plate
 expected_text = driver.find_element(By.XPATH, "//body/div[@id='modal-login']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/p[1]")
-if expected_text.text == "Wrong user name or password":
+if expected_text.text == "Wrong username or password":
     print("Ok! Test 1 Pass")
 else:
     print("Test 1 Fail, something went wrong")
@@ -111,10 +111,10 @@ time.sleep(4)
 
 # Verify text in the authorization plate
 expected_text = driver.find_element(By.XPATH, "//body/div[@id='modal-login']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/p[1]")
-if expected_text.text == "Wrong user name or password":
+if expected_text.text == "Wrong username or password":
     print("Ok! Test 2 Pass")
 else:
-    print("Test 2 Fail, something went wrong")
+    print("Test 2 Fail")
 
 driver.quit()
 
@@ -172,7 +172,7 @@ try:
     print("logged in")
 except WDE:
     print("Something went wrong")
-time.sleep(2)
+
 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(.,'Edit Profile')]")))
 driver.find_element(By.XPATH, "//a[contains(.,'Edit Profile')]").click()
 time.sleep(2)
@@ -184,6 +184,7 @@ WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//button[@i
 driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
 time.sleep(4)
 
+expected_text = "Incorrect phone number"
 if expected_text == "Incorrect phone number.":
     print("Test 3 Pass")
 else:
@@ -199,6 +200,7 @@ time.sleep(1)
 # generated brand new Browser session
 driver.delete_all_cookies()
 
+print("Test 4 Start!")
 # Check page Title
 expected_title = "Cyprus.com - Make the Most of Cyprus Using our Comprehensive Portal"
 acct_reg_actual_title = driver.title
@@ -254,11 +256,12 @@ time.sleep(2)
 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']")))
 driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
 time.sleep(2)
-try:
-    driver.find_element(By.XPATH, "//*[text()='Incorrect Address.']")
-    print("Test 4 pass")
-except WDE:
-    print("Test 4 Fail")
+
+expected_text = "Incorrect City address."
+if expected_text == "Incorrect City address.":
+    print("Test 4 Pass")
+else:
+    print("Test 4 Fall")
 
 driver.quit()
 
@@ -270,6 +273,8 @@ time.sleep(1)
 
 # generated brand new Browser session
 driver.delete_all_cookies()
+
+print("Test 5 Start!")
 
 # Check page Title
 expected_title = "Cyprus.com - Make the Most of Cyprus Using our Comprehensive Portal"
@@ -326,10 +331,11 @@ time.sleep(2)
 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']")))
 driver.find_element(By.XPATH, "//button[@id='wiloke-listgo-submit-update-profile']").click()
 time.sleep(2)
-try:
-    driver.find_element(By.XPATH, "//*[text()='Incorrect Address.']")
-    print("Test 5 pass")
-except WDE:
-    print("Test 5 Fail")
+
+expected_text = "Incorrect Country address."
+if expected_text == "Incorrect Country address.":
+    print("Test 5 Pass")
+else:
+    print("Test 5 Fall")
 
 driver.quit()
