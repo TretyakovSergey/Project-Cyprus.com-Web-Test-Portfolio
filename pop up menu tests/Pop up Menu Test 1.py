@@ -256,10 +256,11 @@ class Test_Prompt_popup_btn(unittest.TestCase):
             print("Tooltip btn is Clickable")
         except WDE:
             print("Tooltip btn is NOT Clickable")
-            time.sleep(3)
+            time.sleep(1)
 
         driver.find_element(By.XPATH, "//div[contains(@class,'tooltip_1')]").click()
-        time.sleep(2)
+        time.sleep(1)
+
 
         try:
             EC.text_to_be_present_in_element_value((By.XPATH, "//span[contains(@id,'myTooltip')]"),'Cool text')
