@@ -66,3 +66,9 @@ class TestSlider(unittest.TestCase):
         time.sleep(1)
         move.click_and_hold(thumb).move_by_offset(-100,0).release().perform()
         time.sleep(2)
+
+    def tearDown(self):
+        self.driver.quit()
+
+    if __name__ == "__main__":
+        unittest.main()
