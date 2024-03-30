@@ -106,7 +106,7 @@ class Test_alert_popup_btn(unittest.TestCase):
         driver.switch_to.alert
         time.sleep(1)
 
-    # Verify Text in popup box
+# Verify Text in popup box
         expected_text = "Hi there, pal!"
         acct_reg_actual_text = driver.switch_to.alert.text
         if expected_text == acct_reg_actual_text:
@@ -160,7 +160,7 @@ class Test_Conf_Popup_btn(unittest.TestCase):
         time.sleep(3)
 
 
-        # Checking the text after clicking Ok!
+ # Checking the text after clicking Ok!
         expected_text = "OK it is!"
         actual_text = "OK it is!"
         if expected_text == actual_text:
@@ -194,7 +194,7 @@ class Test_Conf_Popup_btn(unittest.TestCase):
         driver.switch_to.default_content()
         time.sleep(1)
 
-        # Checking the text after clicking Cancel!
+   # Checking the text after clicking Cancel!
         expected_text = "Cancel it is!"
         actual_text = "Cancel it is!"
         if expected_text == actual_text:
@@ -229,7 +229,7 @@ class Test_Prompt_popup_btn(unittest.TestCase):
 
         driver.switch_to.alert
         time.sleep(3)
-        # Verify Text in popup box
+ # Verify Text in popup box
         expected_text = "Hi there, what's your name?"
         acct_reg_actual_text = driver.switch_to.alert.text
         if expected_text == acct_reg_actual_text:
