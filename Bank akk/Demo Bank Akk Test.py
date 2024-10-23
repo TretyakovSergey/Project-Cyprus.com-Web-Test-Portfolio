@@ -583,4 +583,3 @@ class Test_BSBP_Bank_Akk(unittest.TestCase):
 
 
 
-
