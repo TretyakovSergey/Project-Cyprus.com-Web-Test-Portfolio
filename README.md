@@ -19,7 +19,7 @@
 
 ### ✨ About Me
 
-> 💡 _"Don't make the classic smart person's mistake of thinking no one's smarter than you."_
+> 💡 _"True intelligence is knowing you still have a lot to learn."_
 
 - 🐍 Python + Selenium 
 - 🌍 Based in **Tashkent, Uzbekistan** 🇺🇿  
